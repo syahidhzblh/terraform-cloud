@@ -6,7 +6,7 @@ resource "aws_security_group" "sg-cloud"{
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress{
@@ -14,7 +14,7 @@ resource "aws_security_group" "sg-cloud"{
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
   
     ingress{
@@ -22,7 +22,7 @@ resource "aws_security_group" "sg-cloud"{
     from_port = 433
     to_port = 433
     protocol = "tcp"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress{
@@ -30,7 +30,7 @@ resource "aws_security_group" "sg-cloud"{
   from_port = 0
   to_port = 0
   protocol = -1
-  cidr_block = ["0.0.0.0/0"]
+  cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
