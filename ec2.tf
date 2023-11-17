@@ -5,7 +5,7 @@ provider "aws"{
 resource "aws_instance" "tf-cloud"{
   ami = "ami-0df4b2961410d4cff" #Ubuntu ami
   instance_type = "t2.micro"
-  security_groups = ["default"]
+  security_groups = aws_security_group.sg-cloud
 
   tags = {
     Name = "tf-cloud"
